@@ -1,0 +1,666 @@
+/*
+ * URL ............ http://matthewgump.com
+ * VERSION ........ 0.1.0
+ * AUTHOR ......... Matt Gump
+*/
+
+@import "reset";
+
+/* ==========================================================================
+   Global Variables
+   ========================================================================== */
+
+$site-max-w: 960px;
+
+$fontfamily-lv1: 'Alegreya Sans SC', Helvetica, Arial, sans-serif;
+$fontfamily-lv2: Helvetica, Arial, sans-serif;
+
+/* Color Palette
+   ========================================================================== */
+
+$color-primary: #FF272D;
+$color-secondary: #bef800;
+$color-lv1: #ffffff;
+$color-lv2: #d9d9d9;
+$color-lv3: #a6a6a6;
+$color-lv4: #7f7f7f;
+$color-lv5: #595959;
+$color-lv6: #333333;
+$color-lv7: #000000;
+
+/* ==========================================================================
+   Base Styles: Opinionated Defaults
+   ========================================================================== */
+
+body {
+  line-height: 1.5em;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+body {
+  margin: 0;
+  color: inherit;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+::-moz-selection {
+  background: $color-primary;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: $color-primary;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* ==========================================================================
+   Base Typography styles
+   ========================================================================== */
+
+.font-lv1 {
+  font-family: $fontfamily-lv1;
+}
+
+/* Default Link Styles */
+
+a {
+  border-bottom: 1px solid $color-primary;
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  border-bottom: none;
+  color: $color-primary;
+  text-decoration: none;
+}
+
+a img {
+  border: 0 none;
+}
+
+/* Default Header Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: inherit;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+.h1 {
+  margin-bottom: 0.5em;
+  font-size: 36px;
+}
+
+h2,
+.h2 {
+  margin-bottom: 0.65em;
+  font-size: 30px;
+}
+
+h3,
+.h3 {
+  margin-bottom: 0.8em;
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  margin-bottom: 1.0em;
+  font-size: 18px;
+}
+
+h5,
+.h5 {
+  margin-bottom: 1.4em;
+  font-size: 14px;
+}
+
+h6,
+.h6 {
+  margin-bottom: 1.65em;
+  font-size: 12px;
+}
+
+/* Default List Styles */
+
+ul,
+ol {
+  margin: 0 0 12px 18px;
+  padding: 0;
+  font-size: 14px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 1.428em;
+}
+
+.disc {
+  margin-left: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+/* Default Paragraph Styles */
+
+p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.428em;
+}
+
+/* ==========================================================================
+   Grid System
+   ========================================================================== */
+
+@import "grid";
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 12px 30px;
+  border: 1px solid $color-primary;
+  background: #fff;
+  color: $color-lv6;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  border: 1px solid $color-primary;
+  background: $color-primary;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn--fullWidth {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Modules
+   ========================================================================== */
+
+/* Mod 1
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Top-Level Region Layout Styles
+   ========================================================================== */
+
+.header-site, .section-main, .footer-site {
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Site Header
+   ========================================================================== */
+
+.wrapperHeader-site {
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background: rgba(255, 255, 255, .8);
+}
+
+.header-site {
+  margin: 0 0;
+  height: 54px;
+  -webkit-transition: margin ease 1s;
+  transition: margin ease 1s;
+}
+
+.logoHeader {
+  position: relative;
+  display: inline-block;
+  max-width: 150px;
+  width: 24%;
+  background-color: $color-primary;
+  text-align: center;
+
+    &:after{
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      z-index: 50;
+      margin-left: -15px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid $color-primary;
+      border-right: 15px solid transparent;
+      border-left: 15px solid transparent;
+      content: "";
+      -webkit-transform: scale(.9999);
+      -moz-transform: scale(.9999);
+      transform: scale(.9999);
+    }
+}
+
+.logoHeader img {
+  position: relative;
+  top: 5px;
+  z-index: 100;
+}
+
+.header-site h1 {
+  display: inline-block;
+}
+
+.contactHeader {
+  display: none;
+}
+
+/* @media Queries
+------------------------------------------------*/
+
+@media (min-width: 600px) {
+  .contactHeader {
+    display: inline-block;
+    float: right;
+    margin: 12px 30px 0 0;
+  }
+
+  .wrapperHeader-site {
+    position: fixed;
+  }
+
+  body {
+    padding-top: 54px;
+  }
+}
+
+@media (min-width: 960px) {
+  .header-site {
+    margin: 0 15px;
+  }
+}
+
+/* ==========================================================================
+   Greeting
+   ========================================================================== */
+
+.wrapperSection-greeting {
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  background: #F2F2F2 url('../img/bg_greeting.png') repeat fixed;
+
+    &:before{
+      position: absolute;
+      top: -1px;
+      left: 45%;
+      z-index: 0;
+      margin-left: -1200px;
+      width: 0;
+      height: 0;
+      border-right: 1200px solid #fff;
+      border-bottom: 50px solid transparent;
+      border-left: 1200px solid #fff;
+      content: "";
+      -webkit-transform: scale(.9999);
+      transform: scale(.9999);
+    }
+
+    &:after{
+      position: absolute;
+      bottom: -1px;
+      left: 55%;
+      margin-left: -1200px;
+      width: 0;
+      height: 0;
+      border-top: 50px solid transparent;
+      border-right: 1200px solid #fff;
+      border-left: 1200px solid #fff;
+      content: "";
+      -webkit-transform: scale(.9999);
+      transform: scale(.9999);
+    }
+}
+
+.wrapperSection-greeting>div {
+
+    &:after{
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+      margin-left: -1200px;
+      width: 0;
+      height: 0;
+      border-top: 120px solid transparent;
+      border-right: 1200px solid $color-lv3;
+      border-left: 1200px solid $color-lv5;
+      content: "";
+      -webkit-transform: scale(.9999);
+      transform: scale(.9999);
+    }
+}
+
+.section-greeting {
+  padding: 60px 0;
+  max-width: $site-max-w;
+}
+
+.section-greeting h2 {
+  margin: 0;
+  letter-spacing: -2px;
+  font-size: 60px;
+  -webkit-transition: font-size ease 1s;
+  transition: font-size ease 1s;
+}
+
+/* @media Queries
+------------------------------------------------*/
+
+@media (min-width: 600px) {
+  .section-greeting h2 {
+    font-size: 90px;
+  }
+}
+
+/* ==========================================================================
+   Intro
+   ========================================================================== */
+
+.wrapperSection-intro {
+  border-bottom: 1px solid $color-lv3;
+}
+
+.section-intro {
+  position: relative;
+  padding: 60px 0;
+  max-width: $site-max-w;
+
+    &:before{
+      position: absolute;
+      bottom: -79px;
+      left: 50%;
+      z-index: 10;
+      margin-left: -160px;
+      width: 0;
+      height: 0;
+      border-top: 80px solid #fff;
+      border-right: 160px solid transparent;
+      border-left: 160px solid transparent;
+      content: "";
+      -webkit-transform: scale(.9999);
+      -moz-transform: scale(.9999);
+      transform: scale(.9999);
+    }
+
+    &:after{
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      z-index: 0;
+      margin-left: -160px;
+      width: 0;
+      height: 0;
+      border-top: 80px solid $color-lv3;
+      border-right: 160px solid transparent;
+      border-left: 160px solid transparent;
+      content: "";
+      -webkit-transform: scale(.9999);
+      -moz-transform: scale(.9999);
+      transform: scale(.9999);
+    }
+
+}
+
+.introImg {
+  max-width: 180px;
+  border-radius: 50%;
+}
+
+/* @media Queries
+------------------------------------------------*/
+
+@media (min-width: 600px) {
+  .section-intro {
+    padding: 90px 0;
+  }
+
+  .introImg {
+  max-width: 250px;
+}
+
+}
+
+/* ==========================================================================
+   Samples
+   ========================================================================== */
+
+.section-samples {
+  padding: 180px 0 60px 0;
+  max-width: $site-max-w;
+}
+
+.sample {
+  margin-bottom: 120px;
+}
+
+.sample-graphic {
+
+  img {
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* ==========================================================================
+   Contact Form
+   ========================================================================== */
+
+.wrapperSection-contact {
+  padding: 60px 0;
+  background: $color-lv3 url('../img/bg_mglogo.svg') no-repeat 0 -110px;
+}
+
+.section-contact {
+  max-width: $site-max-w;
+}
+
+input[type=text], input[type=submit], input[type=email], textarea {
+  -webkit-appearance: none; // iOS override
+  border-radius: 0; // iOS override
+}
+
+input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+}
+
+label, input, textarea {
+  display: block;
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  background: $color-lv1;
+  color: $color-lv7;
+}
+
+::-webkit-input-placeholder  {
+  color: $color-lv4;
+}
+
+input:-moz-placeholder {
+  color: $color-lv4;
+}
+
+textarea {
+  overflow: auto;
+  padding: 12px;
+  min-height: 170px;
+  width: 100%;
+  background: $color-lv1;
+  color: $color-lv7;
+  font-family: $fontfamily-lv2;
+}
+
+textarea::-webkit-input-placeholder  {
+  color: $color-lv4;
+  font-family: $fontfamily-lv2;
+}
+
+textarea:-moz-placeholder {
+  color: $color-lv4;
+  font-family: $fontfamily-lv2;
+}
+
+textarea:-ms-input-placeholder {
+  color: $color-lv4;
+  font-family: $fontfamily-lv2;
+}
+
+input[type=submit] {
+  float: right;
+  width: 50%;
+  height: 50px;
+  color: $color-lv7;
+  line-height: 25px;
+  cursor: pointer;
+  background: #a5d600;
+}
+
+input[type=submit]:hover {
+  background: $color-secondary;
+}
+
+input.loading, input.loading:hover {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-bottom: none;
+  border-radius: 50%;
+  background: $color-secondary url('../img/loading.gif') no-repeat center center;
+  text-indent: -9999px;
+  -webkit-transition: width ease 0.5s,
+    border-radius ease 0.5s;
+  transition: width ease 0.5s,
+    border-radius ease 0.5s;
+}
+
+.error {
+  background-color: $color-primary;
+}
+
+.done {
+  display: none;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.wrapperSection-footer {
+  background: $color-lv1;
+}
+
+.footer-site {
+  padding: 24px 0 30px 0;
+  max-width: $site-max-w;
+}
+
+.footer-site small {
+  font-size: 80%;
+}
+
+/* ==========================================================================
+   Helper Classes
+   ========================================================================== */
+
+@import "helpers"
