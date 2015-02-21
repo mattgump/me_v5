@@ -1,17 +1,14 @@
 $(document).ready(function() {
 
 // Go To By Scroll
-
 $('.goToByScroll').on('click', function(e){
   var targetId = $(this).attr('data-targetId');
   e.preventDefault();
-  $('html,body').stop().animate({scrollTop: $('#'+targetId).offset().top-40},'500');
+  $('html,body').stop().animate({scrollTop: $('#'+targetId).offset().top-20},'500');
 });
-
 // end Go To By Scroll
 
 // Get Time
-
 (function(){
 
   var d = new Date(),
@@ -58,13 +55,9 @@ $('.goToByScroll').on('click', function(e){
   }
 
 })();
-
-
-
 // end Get Time
 
 // Contact Form
-
   //if submit button is clicked
   $('#submit').click(function() {
 
@@ -128,7 +121,31 @@ $('.goToByScroll').on('click', function(e){
     //cancel the submit button default behaviors
     return false;
   });
-
 // end Contact Form
+
+// Project Modal
+  $('#projectModal').addClass('noscrollbar');
+
+  $('.btn-modal').on('click', function(e){
+    e.preventDefault();
+    var contentPath = '/projects.html',
+        projectContentId = '#' + $(this).attr('data-projectNum') + 'Content',
+        contentToLoad = contentPath + ' ' + projectContentId;
+    $('body').addClass('noscrollbar');
+    $('#projectModal').removeClass('noscrollbar');
+    $('#content-modal').load(contentToLoad, function(){
+      $('#projectModal').fadeIn(300);
+    });
+
+  });
+
+  $('#closeModal').on('click', function(e){
+    e.preventDefault();
+    $('#projectModal').addClass('noscrollbar');
+    $('body').removeClass('noscrollbar');
+    $('#projectModal').fadeOut(300);
+    $('#projectModal').scrollTop(0);
+  });
+// end Project Modal
 
 });

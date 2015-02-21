@@ -83,16 +83,17 @@ summary,
 time,
 mark,
 audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
+video
+{
+  font-family: inherit;
+  font-size: 100%;
   font-weight: inherit;
   font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
   line-height: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -107,6 +108,7 @@ header,
 hgroup,
 menu,
 nav,
-section {
+section
+{
   display: block;
 }
