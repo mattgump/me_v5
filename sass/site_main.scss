@@ -33,8 +33,7 @@ $color-lv7: #000;
    Mixins
    ========================================================================== */
 
-@mixin vertical-align
-{
+@mixin vertical-align {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -48,30 +47,26 @@ $color-lv7: #000;
 
 *,
 *:before,
-*:after
-{
+*:after {
       box-sizing: border-box;
 
   -ms-box-sizing: border-box;
 }
 
 blockquote,
-q
-{
+q {
   quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
-q:after
-{
+q:after {
   content: '';
   content: none;
 }
 
-table
-{
+table {
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -80,19 +75,16 @@ html,
 button,
 input,
 select,
-textarea
-{
+textarea {
   color: #222;
 }
 
-body
-{
+body {
   margin: 0;
   color: inherit;
 }
 
-hr
-{
+hr {
   display: block;
   height: 1px;
   margin: 1em 0;
@@ -101,32 +93,27 @@ hr
   border-top: 1px solid #ccc;
 }
 
-img
-{
+img {
   vertical-align: middle;
 }
 
-fieldset
-{
+fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-textarea
-{
+textarea {
   resize: vertical;
 }
 
-::-moz-selection
-{
+::-moz-selection {
   color: #fff;
   background: $color-primary;
   text-shadow: none;
 }
 
-::selection
-{
+::selection {
   color: #fff;
   background: $color-primary;
   text-shadow: none;
@@ -137,8 +124,7 @@ textarea
    Base Typography styles
    ========================================================================== */
 
-body
-{
+body {
   font-family: $fontfamily-lv2;
   font-size: 100%;
   line-height: 1.5em;
@@ -146,27 +132,23 @@ body
   -webkit-font-smoothing: antialiased;
 }
 
-.font-lv1
-{
+.font-lv1 {
   font-family: $fontfamily-lv1;
 }
 
 /* Default Link Styles */
 
-a
-{
+a {
   text-decoration: none;
   color: #000;
   border-bottom: 1px solid $color-primary;
   &:hover,
-  &:focus
-  {
+  &:focus {
     text-decoration: none;
     color: $color-primary;
     border-bottom: none;
   }
-  & img
-  {
+  & img {
     border: 0 none;
   }
 }
@@ -178,8 +160,7 @@ h2,
 h3,
 h4,
 h5,
-h6
-{
+h6 {
   line-height: 1;
   margin-top: 0;
   color: inherit;
@@ -188,43 +169,37 @@ h6
 }
 
 h1,
-.h1
-{
+.h1 {
   font-size: 2.250em; // 36px
   margin-bottom: .5em;
 }
 
 h2,
-.h2
-{
+.h2 {
   font-size: 1.875em; // 30px
   margin-bottom: .65em;
 }
 
 h3,
-.h3
-{
+.h3 {
   font-size: 1.500em; // 24px
   margin-bottom: .8em;
 }
 
 h4,
-.h4
-{
+.h4 {
   font-size: 1.125em; // 18px
   margin-bottom: 1.0em;
 }
 
 h5,
-.h5
-{
+.h5 {
   font-size: .875em; // 14px
   margin-bottom: 1.4em;
 }
 
 h6,
-.h6
-{
+.h6 {
   font-size: .750em; // 12px
   margin-bottom: 1.65em;
 }
@@ -232,8 +207,7 @@ h6,
 /* Default List Styles */
 
 ul,
-ol
-{
+ol {
   font-size: .875em; // 14px
   margin: 0 0 12px 18px;
   padding: 0;
@@ -242,23 +216,19 @@ ol
 ul ul,
 ul ol,
 ol ol,
-ol ul
-{
+ol ul {
   margin-bottom: 0;
 }
 
-ul
-{
+ul {
   list-style: none;
 }
 
-li
-{
+li {
   line-height: 1.428em;
 }
 
-.disc
-{
+.disc {
   margin-left: 0;
   padding-left: 18px;
   list-style: disc;
@@ -266,8 +236,7 @@ li
 
 /* Default Paragraph Styles */
 
-p
-{
+p {
   font-family: $fontfamily-lv2;
   font-size: .875em; // 14px
   line-height: 1.428em;
@@ -286,8 +255,7 @@ p
    Buttons
    ========================================================================== */
 
-.btn
-{
+.btn {
   font-size: 14px;
   line-height: 14px;
   display: inline-block;
@@ -299,8 +267,7 @@ p
   color: $color-lv1;
   border: 1px solid $color-lv1;
   &:hover,
-  &:focus
-  {
+  &:focus {
     transition: all .25s ease-out;
     text-decoration: none;
     color: $color-lv7;
@@ -309,26 +276,22 @@ p
   }
 }
 
-.btn--fullWidth
-{
+.btn--fullWidth {
   width: 100%;
 }
 
-.btn-text
-{
+.btn-text {
   font-size: 12px;
   display: inline-block;
   text-transform: uppercase;
   color: $color-lv1;
   border: none;
   &:hover,
-  &:focus
-  {
+  &:focus {
     transition: all .25s ease-out;
     color: $color-lv3;
   }
-  &:before
-  {
+  &:before {
     content: '\00BB \0020';
   }
 }
@@ -347,8 +310,7 @@ p
    ========================================================================== */
 
 .section-main,
-.footer-site
-{
+.footer-site {
   margin: 0 auto;
 }
 
@@ -372,6 +334,11 @@ p
 
 // .headerGroup {
 //   @include vertical-align;
+// }
+
+// .lt-ie10 .headerGroup {
+//   position: relative;
+//   top: 20%;
 // }
 
 // .logoHeader {
@@ -425,8 +392,7 @@ p
    Intro
    ========================================================================== */
 
-.section-intro
-{
+.section-intro {
   max-width: $site-max-w;
   padding: 30px 0;
 }
@@ -434,10 +400,8 @@ p
 /* @media Queries
 ------------------------------------------------*/
 
-@media (min-width: 600px)
-{
-  .section-intro
-  {
+@media (min-width: 600px) {
+  .section-intro {
     padding: 90px;
   }
 }
@@ -447,33 +411,27 @@ p
    Projects
    ========================================================================== */
 
-.wrapperSection-projects
-{
+.wrapperSection-projects {
   background: $color-lv1;
 }
 
-.section-projects
-{
+.section-projects {
   max-width: $site-max-w;
   padding: 30px 0;
 }
 
-.project
-{
+.project {
   overflow: auto;
   margin-bottom: 60px;
   background: $color-lv6 url('../img/darkdenim3.png') repeat;
 }
 
-.project-description
-{
+.project-description {
   padding: 15px;
 }
 
-.project-graphic
-{
-  img
-  {
+.project-graphic {
+  img {
     width: 100%;
     height: auto;
   }
@@ -482,25 +440,20 @@ p
 /* @media Queries
 ------------------------------------------------*/
 
-@media (min-width: 750px)
-{
-  .project-description
-  {
+@media (min-width: 750px) {
+  .project-description {
     float: left;
     width: 37.5%;
     padding-top: 60px;
   }
-  .project-graphic
-  {
+  .project-graphic {
     float: right;
     width: 62.5%;
   }
 }
 
-@media (min-width: 960px)
-{
-  .project-description
-  {
+@media (min-width: 960px) {
+  .project-description {
     padding: 60px 30px 0;
   }
 }
@@ -509,14 +462,11 @@ p
    Project Modle
    ========================================================================== */
 
-.noscrollbar
-{
+.noscrollbar {
   overflow: hidden;
-  margin-right: 15px;
 }
 
-.modal
-{
+.modal {
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -528,48 +478,41 @@ p
   background: $color-lv1;
 }
 
-.header-modal
-{
+.header-modal {
   position: fixed;
   width: 100%;
   background: $color-lv6;
 }
 
-.btn-closeModal
-{
+.btn-closeModal {
   line-height: 80px;
   float: right;
   height: 80px;
   padding: 0 30px;
+  transition: all .25s ease-out;
   color: $color-lv7;
   border: none;
   background: $color-lv2;
-  transition: all .25s ease-out;
-  &:hover
-  {
-    background: $color-lv3;
+  &:hover {
     cursor: pointer;
+    background: $color-lv3;
   }
 }
 
-.section-modal
-{
+.section-modal {
   width: 100%;
   padding: 150px 0 60px;
   text-align: center;
 }
 
-.intro-modal
-{
+.intro-modal {
   max-width: 600px;
   margin: 0 auto 36px;
 }
 
-.projectGraphic-modal
-{
+.projectGraphic-modal {
   padding: 0 6%;
-  img
-  {
+  img {
     max-width: 100%;
     height: auto;
   }
@@ -580,30 +523,26 @@ p
    Contact Form
    ========================================================================== */
 
-.wrapperSection-contact
-{
+.wrapperSection-contact {
   padding: 60px 0;
   background: $color-lv2 ;
 }
 
-.section-contact
-{
+.section-contact {
   max-width: $site-max-w;
 }
 
 input[type=text],
 input[type=submit],
 input[type=email],
-textarea
-{
+textarea {
   border-radius: 0; // iOS override
 
   -webkit-appearance: none; // iOS override
 }
 
 input,
-textarea
-{
+textarea {
   font-size: 14px;
   margin: 0;
   padding: 0;
@@ -612,31 +551,26 @@ textarea
 
 label,
 input,
-textarea
-{
+textarea {
   display: block;
 }
 
-input
-{
+input {
   width: 100%;
   padding: 12px;
   color: $color-lv7;
   background: $color-lv1;
 }
 
-::-webkit-input-placeholder
-{
+::-webkit-input-placeholder {
   color: $color-lv4;
 }
 
-input:-moz-placeholder
-{
+input:-moz-placeholder {
   color: $color-lv4;
 }
 
-textarea
-{
+textarea {
   font-family: $fontfamily-lv2;
   overflow: auto;
   width: 100%;
@@ -646,26 +580,22 @@ textarea
   background: $color-lv1;
 }
 
-textarea::-webkit-input-placeholder
-{
+textarea::-webkit-input-placeholder {
   font-family: $fontfamily-lv2;
   color: $color-lv4;
 }
 
-textarea:-moz-placeholder
-{
+textarea:-moz-placeholder {
   font-family: $fontfamily-lv2;
   color: $color-lv4;
 }
 
-textarea:-ms-input-placeholder
-{
+textarea:-ms-input-placeholder {
   font-family: $fontfamily-lv2;
   color: $color-lv4;
 }
 
-input[type=submit]
-{
+input[type=submit] {
   line-height: 25px;
   float: right;
   width: 50%;
@@ -674,15 +604,13 @@ input[type=submit]
   color: $color-lv7;
 }
 
-input[type=submit]:hover
-{
+input[type=submit]:hover {
   transition: all .25s ease-out;
   background: $color-secondary;
 }
 
 input.loading,
-input.loading:hover
-{
+input.loading:hover {
   overflow: hidden;
   width: 50px;
   height: 50px;
@@ -695,13 +623,11 @@ input.loading:hover
   background: $color-secondary url('../img/loading.gif') no-repeat center center;
 }
 
-.error
-{
+.error {
   background-color: $color-primary;
 }
 
-.done
-{
+.done {
   display: none;
 }
 
@@ -710,13 +636,11 @@ input.loading:hover
    Footer
    ========================================================================== */
 
-.wrapperSection-footer
-{
+.wrapperSection-footer {
   background: $color-lv6;
 }
 
-.footer-site
-{
+.footer-site {
   font-size: .75em;
   max-width: $site-max-w;
   padding: 24px 0 30px 0;
@@ -726,15 +650,12 @@ input.loading:hover
 /* @media Queries
 ------------------------------------------------*/
 
-@media (min-width: 600px)
-{
-  .footer-site .line div:first-child
-  {
+@media (min-width: 600px) {
+  .footer-site .line div:first-child {
     text-align: left;
   }
 
-  .footer-site .line div:last-child
-  {
+  .footer-site .line div:last-child {
     text-align: right;
   }
 }
@@ -745,6 +666,7 @@ input.loading:hover
    ========================================================================== */
 
 @import 'helpers'
+
 
 
 

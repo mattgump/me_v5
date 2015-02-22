@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<!--[if IE 9]> <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
 <title>Hello World!</title>
@@ -48,6 +49,11 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.lt-ie10 .headerGroup {
+  position: relative;
+  top: 20%;
 }
 
 .logoHeader {
@@ -301,37 +307,6 @@ Scripts
   s.parentNode.insertBefore(g,s);}(document,'script'));
 </script>
 <!-- end Google Analytics -->
-
-<!-- Project Modal -->
-<!-- <script type="text/javascript">
-$(document).ready(function() {
-
-  $('#projectModal').addClass('noscrollbar');
-
-  $('.btn-modal').on('click', function(e){
-    e.preventDefault();
-    var contentPath = '/projects.html',
-        projectContentId = '#' + $(this).attr('data-projectNum') + 'Content',
-        contentToLoad = contentPath + ' ' + projectContentId;
-    $('body').addClass('noscrollbar');
-    $('#projectModal').removeClass('noscrollbar');
-    $('#content-modal').load(contentToLoad, function(){
-      $('#projectModal').fadeIn(300);
-    });
-
-  });
-
-  $('#closeModal').on('click', function(e){
-    e.preventDefault();
-    $('#projectModal').addClass('noscrollbar');
-    $('body').removeClass('noscrollbar');
-    $('#projectModal').fadeOut(300);
-    $('#projectModal').scrollTop(0);
-  });
-
-});
-</script> -->
-<!-- end Project Modal -->
 
 
 </body>

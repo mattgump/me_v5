@@ -124,27 +124,23 @@ $('.goToByScroll').on('click', function(e){
 // end Contact Form
 
 // Project Modal
-  $('#projectModal').addClass('noscrollbar');
-
   $('.btn-modal').on('click', function(e){
     e.preventDefault();
     var contentPath = '/projects.html',
         projectContentId = '#' + $(this).attr('data-projectNum') + 'Content',
         contentToLoad = contentPath + ' ' + projectContentId;
-    $('body').addClass('noscrollbar');
-    $('#projectModal').removeClass('noscrollbar');
     $('#content-modal').load(contentToLoad, function(){
-      $('#projectModal').fadeIn(300);
+      $('#projectModal').show();
+      $('body').addClass('noscrollbar');
     });
 
   });
 
   $('#closeModal').on('click', function(e){
     e.preventDefault();
-    $('#projectModal').addClass('noscrollbar');
     $('body').removeClass('noscrollbar');
-    $('#projectModal').fadeOut(300);
     $('#projectModal').scrollTop(0);
+    $('#projectModal').hide();
   });
 // end Project Modal
 

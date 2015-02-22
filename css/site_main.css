@@ -776,7 +776,6 @@ p {
    ========================================================================== */
 .noscrollbar {
   overflow: hidden;
-  margin-right: 15px;
 }
 
 .modal {
@@ -802,14 +801,14 @@ p {
   float: right;
   height: 80px;
   padding: 0 30px;
+  transition: all .25s ease-out;
   color: black;
   border: none;
   background: #d9d9d9;
-  transition: all .25s ease-out;
 }
 .btn-closeModal:hover {
-  background: #a6a6a6;
   cursor: pointer;
+  background: #a6a6a6;
 }
 
 .section-modal {
