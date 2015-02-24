@@ -734,16 +734,12 @@ p {
 
 .section-projects {
   max-width: 960px;
-  padding: 90px 0;
 }
 
 .project {
   overflow: auto;
   margin-bottom: 60px;
   background: #212121 url("../img/darkdenim3.png") repeat;
-}
-.project:last-child {
-  margin-bottom: 0;
 }
 
 .project-description {

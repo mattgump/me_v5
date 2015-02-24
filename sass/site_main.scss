@@ -417,16 +417,12 @@ p {
 
 .section-projects {
   max-width: $site-max-w;
-  padding: 90px 0;
 }
 
 .project {
   overflow: auto;
   margin-bottom: 60px;
   background: $color-lv6 url('../img/darkdenim3.png') repeat;
-    &:last-child {
-      margin-bottom: 0;
-    }
 }
 
 .project-description {
