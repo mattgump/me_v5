@@ -100,6 +100,20 @@
   }
 }
 </style>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32237006-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- end Google Analytics -->
+
 </head>
 <body>
 
@@ -171,8 +185,8 @@ Projects
       <div class="project-description">
         <h4 class="font-lv1 color-lv1 uppercase">DeWALT Building the American Story</h4>
         <p class="below-lv5 color-lv3">A collection of landing pages featuring stories from DeWALT users paired with tools of their trade. The site continues to evolve as stories are added to the campaign.</p>
-        <a data-projectNum="project1" class="btn btn-modal" target="_blank">View Project</a><br>
-        <a class="btn-text" target="_blank" href="http://americanstory.dewalt.com/">View Live Site</a>
+        <a data-projectNum="project1" class="btn btn-modal" target="_blank" onClick="ga('send', 'event', { eventCategory: 'projects', eventAction: 'click', eventLabel: 'view_proj1'});">View Project</a><br>
+        <a class="btn-text" target="_blank" href="http://americanstory.dewalt.com/" onClick="ga('send', 'event', { eventCategory: 'projects', eventAction: 'click', eventLabel: 'view_site1'});">View Live Site</a>
       </div>
     </div><!-- end .project -->
 <!-- end Project -->
@@ -187,7 +201,7 @@ Projects
       <div class="project-description">
         <h4 class="font-lv1 color-lv1 uppercase">BLACK+DECKER AutoSense</h4>
         <p class="below-lv5 color-lv3">This landing page showcases B+D's latest drill technology and branding direction.</p>
-        <a data-projectNum="project2" class="btn btn-modal" target="_blank">View Project</a><br>
+        <a data-projectNum="project2" class="btn btn-modal" target="_blank" onClick="ga('send', 'event', { eventCategory: 'projects', eventAction: 'click', eventLabel: 'view_proj2'});">View Project</a><br>
         <!-- <a class="btn-text" target="_blank" href="http://autosense.blackanddecker.com/">View Live Site</a> -->
       </div>
     </div><!-- end .project -->
@@ -203,7 +217,7 @@ Projects
       <div class="project-description">
         <h4 class="font-lv1 color-lv1 uppercase">BLACK+DECKER Hand Vacuums</h4>
         <p class="below-lv5 color-lv3">This landing page showcases B+D's latest hand vacuums and branding direction.</p>
-        <a data-projectNum="project3" class="btn btn-modal" target="_blank">View Project</a><br>
+        <a data-projectNum="project3" class="btn btn-modal" target="_blank" onClick="ga('send', 'event', { eventCategory: 'projects', eventAction: 'click', eventLabel: 'view_proj3'});">View Project</a><br>
         <!-- <a class="btn-text" target="_blank" href="http://lithium-vacs.blackanddecker.com/">View Live Site</a> -->
       </div>
     </div><!-- end .project -->
@@ -298,19 +312,6 @@ Scripts
     }
 </script>
 <script type="text/javascript" src="js/site_main.js"></script>
-
-<!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-32237006-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<!-- end Google Analytics -->
 
 </body>
 </html>
