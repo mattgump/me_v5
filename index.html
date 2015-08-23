@@ -10,7 +10,6 @@
 <meta name="googlebot" content="noindex">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" type="text/css" href="css/site_main.css">
-<link rel="stylesheet" type="text/css" href="css/animate.css">
 <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196.png">
@@ -32,74 +31,6 @@
 <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<style type="text/css">
-.wrapperHeader-site {
-  width: 100%;
-  background: #212121 url("img/bg_main_sm.jpg") no-repeat top center;
-}
-
-.header-site {
-  height: 92vh;
-  min-height: 400px;
-  text-align: center;
-}
-
-.headerGroup {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.lt-ie10 .headerGroup {
-  position: relative;
-  top: 20%;
-}
-
-.logoHeader {
-  display: inline-block;
-  width: 40%;
-  max-width: 230px;
-}
-.logoHeader img {
-  width: 100%;
-  height: auto;
-}
-
-.headerSkip {
-  display: block;
-  width: 100%;
-  height: 8vh;
-  min-height: 50px;
-  text-align: center;
-  border: none;
-}
-.headerSkip:hover img {
-  top: 10%;
-}
-.headerSkip img {
-  position: relative;
-  top: 0;
-  transition: all .25s ease-out;
-}
-
-/* @media Queries
-------------------------------------------------*/
-@media (min-width: 400px) {
-  .wrapperHeader-site {
-    background: #212121 url("img/bg_main_md.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-}
-@media (min-width: 600px) {
-  .wrapperHeader-site {
-    background: #212121 url("img/bg_main_lg.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-}
-</style>
 
 <!-- Google Analytics -->
 <script>
@@ -135,14 +66,14 @@ Site Header
 <div class="wrapperHeader-site">
   <header class="header-site">
     <div class="headerGroup">
-      <figure class="logoHeader below-lv5 animated flipInX">
+      <figure class="logoHeader below-lv5 flipInX">
         <img alt="MG Logo" src="img/logo_mg.svg">
       </figure>
       <h1 class="font-lv1 color-lv1 uppercase h4">Matthew Gump</h1>
       <h2 class="color-lv4 uppercase h5 italic">Front-End Designer &amp; Developer</h2>
     </div>
   </header><!-- end .header-site -->
-  <a class="headerSkip goToByScroll" data-targetId="intro" href=""><img alt="arrow icon" src="img/ui_arrow.svg"></a>
+  <a class="headerSkip goToByScroll" data-targetId="intro" href="#intro"><img alt="arrow icon" src="img/ui_arrow.svg"></a>
 </div><!-- end .wrapperHeader-site -->
 
 
@@ -154,13 +85,11 @@ Intro
 
 <div id="intro" class="wrapperSection-intro">
   <section class="section-main section-intro">
-    <div class="line">
-      <div class="lastUnit size1of1-xs alignc">
-        <h3 class="font-lv1 uppercase h4">A Little About Me</h3>
-        <p><span class="customGreeting"></span> Currently I'm a front-end designer/developer at <a href="http://www.stanleyblackanddecker.com/">Stanley Black &amp; Decker</a> where I create and service digital properties across multiple brands. I have a passion for finding creative ways to communicate information and solving the unique challenges each project presents.</p>
-        <p>Below you can view samples of my recent work and  <a class="goToByScroll" data-targetId="contact" href="">contact me</a> with whatever is on your mind.</p>
-      </div>
-    </div><!-- end .line -->
+    <div class="offset-2 grid-8 m-grid-12 s-grid-12 pad-2-sides alignc">
+      <h3 class="font-lv1 uppercase h4">A Little About Me</h3>
+      <p><span class="customGreeting"></span> Currently I'm a front-end designer/developer at <a href="http://www.stanleyblackanddecker.com/">Stanley Black &amp; Decker</a> where I create and service digital properties across multiple brands. I have a passion for finding creative ways to communicate information and solving the unique challenges each project presents.</p>
+      <p>Below you can view samples of my recent work and  <a class="goToByScroll" data-targetId="contact" href="">contact me</a> with whatever is on your mind.</p>
+    </div>
 
   </section><!-- end .section-intro -->
 </div><!-- end .wrapperSection-intro -->
@@ -235,31 +164,27 @@ Contact Form
 
 <div class="wrapperSection-contact">
   <section class="section-main section-contact" id="contact">
-    <div class="done line">
-      <div class="lastUnit size1of1-xs">
-        <h3 class="color-lv6">Thank you for your message.</h3>
-      </div>
-    </div><!-- end .line -->
-    <div class="form line">
-      <div class="lastUnit size1of1-xs">
-        <h3 class="font-lv1 color-lv7 uppercase h4">Contact Me</h3>
-      </div>
-    </div><!-- end .line -->
-    <div class="form line">
+    <div class="grid-12 pad-2-sides done">
+      <h3 class="color-lv6">Thank you for your message.</h3>
+    </div><!-- end .grid -->
+    <div class="grid-12 pad-2-sides form">
+      <h3 class="font-lv1 color-lv7 uppercase h4">Contact Me</h3>
+    </div><!-- end .grid -->
+    <div class="form">
       <fieldset>
-      <div class="unit size1of1-xs size3of8-sm">
+      <div class="grid-5 s-grid-12 pad-2-sides">
         <label class="font-lv1 color-lv5" for="name">Name*</label>
         <input class="below-lv2" type="text" name="name" required="required" id="name" placeholder="Enter your name"  autocomplete="off">
         <label class="font-lv1 color-lv5" for="email">Email*</label>
         <input class="below-lv2" type="email" name="email" required="required" id="email" placeholder="Enter your email address"  autocomplete="off">
-      </div>
-      <div class="lastUnit size1of1-xs size5of8-sm">
+      </div><!-- end .grid -->
+      <div class="grid-7 s-grid-12 pad-2-sides">
         <label class="font-lv1 color-lv5" for="comment">Message*</label>
         <textarea class="below-lv4" id="comment" name="comment" required="required" placeholder="What's on your mind?"></textarea>
         <input class="below-lv2" type="submit" id="submit" value="Submit">
-      </div>
+      </div><!-- end .grid -->
       </fieldset>
-    </div><!-- end .line -->
+    </div><!-- end .form -->
   </section><!-- end .section-contact -->
 </div><!-- end .wrapperSection-contact -->
 
@@ -272,14 +197,12 @@ Footer
 
 <div class="wrapperSection-footer">
   <footer class="footer-site">
-    <div class="line">
-      <div class="unit size1of1-xs size1of2-sm">
+      <div class="grid-6 m-grid-12 s-grid-12 pad-2-sides">
         <small class="color-lv4">Handmade with <img src="img/icon_heart.svg">.</small>
-      </div>
-      <div class="lastUnit size1of1-xs size1of2-sm">
+      </div><!-- end .grid -->
+      <div class="grid-6 m-grid-12 s-grid-12 pad-2-sides">
         <small class="color-lv4">matthewgump.com &copy; 2015</small>
-      </div>
-    </div><!-- end .line -->
+      </div><!-- end .grid -->
   </footer><!-- end .footer-site -->
 </div><!-- end .wrapperSection-footer -->
 
